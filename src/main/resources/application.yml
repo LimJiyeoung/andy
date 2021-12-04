@@ -1,0 +1,27 @@
+# DB - H2
+spring:
+  datasource:
+    url: jdbc:h2:mem:andy
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+
+# JPA
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+
+# Log
+logging.level:
+  web: error
+  org.hibernate.SQL: debug
+
+# Port
+server:
+  port: 9000
